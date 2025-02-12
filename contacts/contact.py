@@ -36,7 +36,9 @@ class ContactsManager:
         self.save_contacts()
         print('contact added')
 
-
+    def display_contacts(self):
+        for contact_id, details in self.contacts:
+            print(f"ID: {contact_id}, Name: {details['name']}, Phone: {details['phone']}, Email: {details['email']}, Groups: {details['groups']}")
     def pop_contact(self,contact_id):
         for contact in self.contacts:
             if contact.ID == contact_id:
